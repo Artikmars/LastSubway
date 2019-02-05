@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="30dip"
+        android:background="@color/darkpurple"
+        android:id="@+id/Body">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="40sp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/white"
+            android:text="@string/LineText"
+            android:id="@+id/LineText" />
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ListLines"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:layout_below="@+id/LineText"
+            android:prompt="@string/selectl"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="40sp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/white"
+            android:text="@string/StationText"
+            android:id="@+id/StationText"
+            android:layout_below="@+id/ListLines" />
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ListStations"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:layout_below="@+id/StationText"
+            android:prompt="@string/selects"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/Legs"
+        android:background="@color/white"
+        android:padding="30dip"
+        android:layout_below="@+id/Body">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="400dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="40sp"
+                    android:baselineAligned="false"
+                    android:layout_marginTop="30dp"
+                    android:textColor="@color/darkpurple"
+                    android:text="@string/StationCloseText"
+                    android:id="@+id/StationCloseText1" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="40sp"
+                    android:baselineAligned="false"
+                    android:layout_marginTop="30dp"
+                    android:textColor="@color/darkpurple"
+                    android:id="@+id/StationClose"
+                    android:gravity="bottom|right"
+                    android:layout_gravity="bottom|right" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="400dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="40sp"
+                    android:baselineAligned="false"
+                    android:layout_marginTop="30dp"
+                    android:textColor="@color/darkpurple"
+                    android:text="@string/StationLastText"
+                    android:id="@+id/StationLastText1" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="40sp"
+                    android:baselineAligned="false"
+                    android:layout_marginTop="30dp"
+                    android:textColor="@color/darkpurple"
+                    android:id="@+id/StationLast1"
+                    android:gravity="bottom|right"
+                    android:layout_gravity="bottom|right"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:layout_width="400dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="40sp"
+                    android:baselineAligned="false"
+                    android:layout_marginTop="30dp"
+                    android:textColor="@color/darkpurple"
+                    android:text="@string/StationLastText"
+                    android:id="@+id/StationLastText2" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="24sp"
+                    android:baselineAligned="false"
+                    android:layout_marginTop="30dp"
+                    android:textColor="@color/darkpurple"
+                    android:id="@+id/StationLast2"
+                    android:gravity="bottom|right"
+                    android:layout_gravity="bottom|right"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

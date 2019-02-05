@@ -1,0 +1,347 @@
+<resources>
+    <string name="app_name">Успей на метро</string>
+    <string name="about_text">Исключениями являются праздники: Новый год, День Независимости, Пасха и дни проведения вечерних футбольных матчей UEFA:  Лиги Чемпионов и Лиги Европы. Время работы всех станций продлевается на 1 час. Обычно в дни футбольных матчей для выхода пассажиров закрываются ст. Дворец Спорта и ст. Олимпийская за 1 час до матча.\n\nВ программе указаны поезда, на которые гарантированно можно успеть после закрытия станций. Физически поезда ходят и дальше, но станции в тот момент работают только на выход.\n\nСтоит помнить, что сев на любой последний поезд из списка, вы гарантированно успеете на пересадку с поездом на другой линии.</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Установки</string>
+    <string name="secondpagetitle">Выбор станции</string>
+    <string name="selectl">Выберите линию</string>
+    <string name="selects">Выберите станцию</string>
+    <string name="StationCloseText">Закрытие\nстанции: </string>
+    <string name="StationCloseText2">Закрытие\nвестибюлей №1/2: </string>
+    <string name="StationLastText">Последний поезд\nв сторону: </string>
+    <string name="StationFirstText">Первый поезд в сторону: </string>
+    <string name="StationOpenText">Станция открывается: </string>
+    <string name="StationLastTextTeremki">Последний поезд\nк Теремкам: </string>
+    <string name="StationLastTextLesnaya">Последний поезд\nк Лесной: </string>
+    <string name="StationFirstTextTeremki">Первый поезд к Теремкам: </string>
+    <string name="StationLastTextGeroev">Последний поезд\nк Героев Днепра: </string>
+    <string name="StationLastTextAkadem">Последний поезд\nк Академгородку: </string>
+    <string name="StationFirstTextGeroev">Первый поезд к Героев Днепра: </string>
+    <string name="StationLastTextHutor">Последний поезд\nк Красному хутору: </string>
+    <string name="StationLastTextSyrec">Последний поезд\nк станции Сырец: </string>
+
+    <string name="TitleText1">Успей\nна метро</string>
+    <string name="TitleText2">Время закрытия станций\nи отправления последних поездов\nв киевском метро</string>
+    <string name="LineText">Выберите линию</string>
+    <string name="StationText">Выберите станцию</string>
+    <string name="VectorBlue1">К Героев Днепра</string>
+    <string name="VectorBlue2">К Теремкам</string>
+    <string name="VectorRed1">К Академгородку</string>
+    <string name="VectorRed2">К Лесной</string>
+    <string name="VectorGreen1">К станции Сырец</string>
+    <string name="VectorGreen2">К Красному хутору</string>
+    <string name="about_title">Важно знать</string>
+
+    <string-array name="LinesList">
+        <item>Куренёвско-Красноармейская</item>
+        <item>Святошинско-Броварская</item>
+        <item>Сырецко-Печерская</item>
+    </string-array>
+
+    <string-array name="BlueStationsList">
+        <item>Героев Днепра</item>
+        <item>Минская</item>
+        <item>Оболонь</item>
+        <item>Петровка</item>
+        <item>Тараса Шевченко</item>
+        <item>Контрактовая площадь</item>
+        <item>Почтовая площадь</item>
+        <item>Площадь Независимости</item>
+        <item>Площадь Льва Толстого</item>
+        <item>Олимпийская</item>
+        <item>Дворец Украина</item>
+        <item>Лыбедская</item>
+        <item>Демиевская</item>
+        <item>Голосеевская</item>
+        <item>Васильковская</item>
+        <item>Выставочный центр</item>
+        <item>Ипподром</item>
+        <item>Теремки</item>
+    </string-array>
+
+    <string-array name="BlueStationsClose">
+        <item>00:02</item>
+        <item>00:01</item>
+        <item>00:06</item>
+        <item>00:09</item>
+        <item>00:11</item>
+        <item>00:13</item>
+        <item>00:14</item>
+        <item>00:14</item>
+        <item>00:16</item>
+        <item>00:15</item>
+        <item>00:13</item>
+        <item>00:12</item>
+        <item>00:11</item>
+        <item>00:09</item>
+        <item>00:06</item>
+        <item>00:04</item>
+        <item>00:04</item>
+        <item>00:00</item>
+    </string-array>
+
+    <string-array name="BlueStationsClose2">
+        <item>00:00</item>
+        <item>00:04</item>
+        <item>00:03</item>
+        <item>00:06</item>
+        <item></item>
+        <item>00:10</item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item>00:09</item>
+        <item></item>
+        <item>00:01</item>
+        <item>00:02</item>
+    </string-array>
+
+    <string-array name="BlueStationsLastTerem">
+        <item>00:05</item>
+        <item>00:07</item>
+        <item>00:09</item>
+        <item>00:11</item>
+        <item>00:14</item>
+        <item>00:16</item>
+        <item>00:18</item>
+        <item>00:20</item>
+        <item>00:22</item>
+        <item>00:23</item>
+        <item>00:25</item>
+        <item>00:17</item>
+        <item>00:18</item>
+        <item>00:20</item>
+        <item>00:13</item>
+        <item>00:16</item>
+        <item>00:07</item>
+        <item></item>
+    </string-array>
+
+    <string-array name="BlueStationsLastGeroev">
+        <item></item>
+        <item>00:08</item>
+        <item>00:16</item>
+        <item>00:14</item>
+        <item>00:21</item>
+        <item>00:19</item>
+        <item>00:17</item>
+        <item>00:25</item>
+        <item>00:23</item>
+        <item>00:21</item>
+        <item>00:19</item>
+        <item>00:18</item>
+        <item>00:16</item>
+        <item>00:14</item>
+        <item>00:12</item>
+        <item>00:09</item>
+        <item>00:07</item>
+        <item>00:05</item>
+    </string-array>
+
+    <string-array name="RedStationsList">
+        <item>Академгородок</item>
+        <item>Житомирская</item>
+        <item>Святошин</item>
+        <item>Нивки</item>
+        <item>Берестейская</item>
+        <item>Шулявская</item>
+        <item>Политехнический институт</item>
+        <item>Вокзальная</item>
+        <item>Университет</item>
+        <item>Театральная</item>
+        <item>Крещатик</item>
+        <item>Арсенальная</item>
+        <item>Днепр</item>
+        <item>Гидропарк</item>
+        <item>Левобережная</item>
+        <item>Дарница</item>
+        <item>Черниговская</item>
+        <item>Лесная</item>
+    </string-array>
+
+    <string-array name="RedStationsClose">
+        <item>00:02</item>
+        <item>00:02</item>
+        <item>00:03</item>
+        <item>00:10</item>
+        <item>00:11</item>
+        <item>00:11</item>
+        <item>00:14</item>
+        <item>00:16</item>
+        <item>00:16</item>
+        <item>00:18</item>
+        <item>00:12</item>
+        <item>00:10</item>
+        <item>00:12</item>
+        <item>00:10</item>
+        <item>00:05</item>
+        <item>00:06</item>
+        <item>00:04</item>
+        <item>00:02</item>
+    </string-array>
+
+    <string-array name="RedStationsClose2">
+        <item>00:00</item>
+        <item>00:05</item>
+        <item>00:07</item>
+        <item>00:07</item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item>00:11(0:13)</item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item>00:08</item>
+        <item>00:03</item>
+        <item>00:01</item>
+        <item>00:00</item>
+    </string-array>
+
+    <string-array name="RedStationsLastLesnaya">
+        <item>00:05</item>
+        <item>00:07</item>
+        <item>00:10</item>
+        <item>00:12</item>
+        <item>00:13</item>
+        <item>00:16</item>
+        <item>00:18</item>
+        <item>00:22</item>
+        <item>00:23</item>
+        <item>00:25</item>
+        <item>00:27</item>
+        <item>00:19</item>
+        <item>00:21</item>
+        <item>00:23</item>
+        <item>00:15</item>
+        <item>00:17</item>
+        <item>00:09</item>
+        <item></item>
+    </string-array>
+
+    <string-array name="RedStationsLastAkadem">
+        <item></item>
+        <item>00:15</item>
+        <item>00:12</item>
+        <item>00:21</item>
+        <item>00:19</item>
+        <item>00:23</item>
+        <item>00:21</item>
+        <item>00:26</item>
+        <item>00:24</item>
+        <item>00:22</item>
+        <item>00:21</item>
+        <item>00:18</item>
+        <item>00:16</item>
+        <item>00:14</item>
+        <item>00:11</item>
+        <item>00:09</item>
+        <item>00:07</item>
+        <item>00:05</item>
+    </string-array>
+
+    <string-array name="GreenStationsList">
+        <item>Сырец</item>
+        <item>Дорогожичи</item>
+        <item>Лукьяновская</item>
+        <item>Золотые ворота</item>
+        <item>Дворец спорта</item>
+        <item>Кловская</item>
+        <item>Печерская</item>
+        <item>Дружбы народов</item>
+        <item>Выдубичи</item>
+        <item>Славутич</item>
+        <item>Осокорки</item>
+        <item>Позняки</item>
+        <item>Харьковская</item>
+        <item>Вырлица</item>
+        <item>Бориспольская</item>
+        <item>Красный хутор</item>
+    </string-array>
+
+    <string-array name="GreenStationsClose">
+        <item>00:00</item>
+        <item>00:00</item>
+        <item>00:06</item>
+        <item>00:06</item>
+        <item>00:11</item>
+        <item>00:11</item>
+        <item>00:11</item>
+        <item>00:16</item>
+        <item>00:14</item>
+        <item>00:08</item>
+        <item>00:06</item>
+        <item>00:06</item>
+        <item>00:00</item>
+        <item>00:00</item>
+        <item>00:00</item>
+        <item>23:57</item>
+    </string-array>
+
+    <string-array name="GreenStationsClose2">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item>00:17</item>
+        <item></item>
+        <item>00:09</item>
+        <item>00:03</item>
+        <item>00:03</item>
+        <item></item>
+        <item>23:58</item>
+        <item></item>
+    </string-array>
+
+    <string-array name="GreenStationsLastHutor">
+        <item>00:05</item>
+        <item>00:07</item>
+        <item>00:10</item>
+        <item>00:15</item>
+        <item>00:17</item>
+        <item>00:19</item>
+        <item>00:21</item>
+        <item>00:23</item>
+        <item>00:25</item>
+        <item>00:18</item>
+        <item>00:20</item>
+        <item>00:10</item>
+        <item>00:14</item>
+        <item>00:16</item>
+        <item>00:05</item>
+        <item></item>
+    </string-array>
+
+    <string-array name="GreenStationsLastSyrec">
+        <item></item>
+        <item>00:16</item>
+        <item>00:13</item>
+        <item>00:30</item>
+        <item>00:28</item>
+        <item>00:26</item>
+        <item>00:24</item>
+        <item>00:22</item>
+        <item>00:20</item>
+        <item>00:13</item>
+        <item>00:12</item>
+        <item>00:09</item>
+        <item>00:06</item>
+        <item>00:04</item>
+        <item>00:02</item>
+        <item>00:00</item>
+    </string-array>
+
+</resources>
