@@ -2,8 +2,6 @@ package lnk.lastsubway;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.content.res.TypedArray;
-import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
@@ -13,64 +11,47 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.RelativeLayout;
 import android.widget.Spinner;
-import android.widget.TabHost;
-import android.widget.TabWidget;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdSize;
-import com.google.android.gms.ads.AdView;
-
-import org.w3c.dom.Text;
-
-import java.lang.reflect.Array;
-
-/**
- * Created by IGOR on 30.08.2015.
- */
 public class SecondActivity extends Activity {
-    String[] stations, timesB, timesR, timesG, timesB2, timesR2, timesG2, lastB1, lastB2, lastR1, lastR2, lastG1, lastG2;
-    public static Spinner spinner1, spinner2;
-    int count = 0;
-    private AdView adView;
-
+    private Spinner spinner1, spinner2;
+    private String[] timesB, timesR, timesG, timesB2, timesR2, timesG2, lastB1, lastB2, lastR1, lastR2, lastG1, lastG2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.second_activity);
 
-        adView = (AdView) findViewById(R.id.adView);
+        //   adView = (AdView) findViewById(R.id.adView);
         //adView = new AdView(this);
         //adView.setAdSize(AdSize.SMART_BANNER);
-        AdRequest adRequest = new AdRequest.Builder()
-           //             .addTestDevice("0xb900f6f8")
-                .build();
-        adView.loadAd(adRequest);
+        // AdRequest adRequest = new AdRequest.Builder()
+        //             .addTestDevice("0xb900f6f8")
+        //          .build();
+        //   adView.loadAd(adRequest);
 
-        final RelativeLayout body = (RelativeLayout) findViewById(R.id.Body);
+        final RelativeLayout body = findViewById(R.id.Body);
         body.setBackgroundColor(getResources().getColor(R.color.darkpurple));
 
-        final TextView LineText = (TextView) findViewById(R.id.LineText);
-        final TextView About = (TextView) findViewById(R.id.About);
-        final TextView StationText = (TextView) findViewById(R.id.StationText);
-        final TextView StationCloseText = (TextView) findViewById(R.id.StationCloseText1);
-        final TextView StationClose = (TextView) findViewById(R.id.StationClose);
-        final TextView LastText1 = (TextView) findViewById(R.id.StationLastText1);
-        final TextView LastText2 = (TextView) findViewById(R.id.StationLastText2);
-        final TextView Last1 = (TextView) findViewById(R.id.StationLast1);
-        final TextView Last2 = (TextView) findViewById(R.id.StationLast2);
+        final TextView LineText = findViewById(R.id.LineText);
+        final TextView About = findViewById(R.id.About);
+        final TextView StationText = findViewById(R.id.StationText);
+        final TextView StationCloseText = findViewById(R.id.StationCloseText1);
+        final TextView StationClose = findViewById(R.id.StationClose);
+        final TextView LastText1 = findViewById(R.id.StationLastText1);
+        final TextView LastText2 = findViewById(R.id.StationLastText2);
+        final TextView Last1 = findViewById(R.id.StationLast1);
+        final TextView Last2 = findViewById(R.id.StationLast2);
         Typeface font3 = Typeface.createFromAsset(getAssets(), "Roboto-Thin.ttf");
-        Typeface font4 = Typeface.createFromAsset(getAssets(), "Roboto-Light.ttf");
+        //Typeface font4 = Typeface.createFromAsset(getAssets(), "Roboto-Light.ttf");
         LineText.setTypeface(font3);
         StationText.setTypeface(font3);
         StationCloseText.setTypeface(font3);
         LastText1.setTypeface(font3);
         LastText2.setTypeface(font3);
 
-        spinner1 = (Spinner) findViewById(R.id.ListLines);
-        spinner2 = (Spinner) findViewById(R.id.ListStations);
+        spinner1 = findViewById(R.id.ListLines);
+        spinner2 = findViewById(R.id.ListStations);
 
         timesB = getResources().getStringArray(R.array.BlueStationsClose);
         timesB2 = getResources().getStringArray(R.array.BlueStationsClose2);
@@ -113,7 +94,7 @@ public class SecondActivity extends Activity {
         About.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(SecondActivity.this, AboutActitivy.class));
+                startActivity(new Intent(SecondActivity.this, AboutActivity.class));
             }
         });
 
@@ -162,7 +143,7 @@ public class SecondActivity extends Activity {
                     case 0:
                         String time = timesB[spinner2.getSelectedItemPosition()];
                         String time02 = timesB2[spinner2.getSelectedItemPosition()];
-                        if (time02.length()!=0) {
+                        if (time02.length() != 0) {
                             StationCloseText.setText(R.string.StationCloseText2);
                             StationClose.setText(time + "/" + time02);
                         } else {
@@ -182,17 +163,17 @@ public class SecondActivity extends Activity {
                     case 1:
                         String time1 = timesR[spinner2.getSelectedItemPosition()];
                         String time12 = timesR2[spinner2.getSelectedItemPosition()];
-                        if (spinner2.getSelectedItemPosition()==10) {
+                        if (spinner2.getSelectedItemPosition() == 10) {
                             StationCloseText.setText("Закрытие выходов\nКрещ./Инст./Городец.: ");
                             StationClose.setText("00:12/11/13");
-                        } else
-                        if (time12.length()!=0) {
+                        } else if (time12.length() != 0) {
                             StationCloseText.setText(R.string.StationCloseText2);
                             StationClose.setText(time1 + "/" + time12);
                         } else {
                             StationCloseText.setText(R.string.StationCloseText);
                             StationClose.setText(time1);
-                        }                        StationClose.startAnimation(animation);
+                        }
+                        StationClose.startAnimation(animation);
                         String last3 = lastR1[spinner2.getSelectedItemPosition()];
                         LastText1.setText(R.string.StationLastTextLesnaya);
                         Last1.setText(last3);
@@ -205,7 +186,7 @@ public class SecondActivity extends Activity {
                     case 2:
                         String time2 = timesG[spinner2.getSelectedItemPosition()];
                         String time22 = timesG2[spinner2.getSelectedItemPosition()];
-                        if (time22.length()!=0) {
+                        if (time22.length() != 0) {
                             StationCloseText.setText(R.string.StationCloseText2);
                             StationClose.setText(time2 + "/" + time22);
                         } else {
@@ -236,24 +217,24 @@ public class SecondActivity extends Activity {
     @Override
     public void onResume() {
         super.onResume();
-        if (adView != null) {
+        /*if (adView != null) {
             adView.resume();
-        }
+        }*/
     }
 
     @Override
     public void onPause() {
-        if (adView != null) {
-            adView.pause();
-        }
+        // if (adView != null) {
+        //      adView.pause();
+        //   }
         super.onPause();
     }
 
     @Override
     public void onDestroy() {
-        if (adView != null) {
+     /*   if (adView != null) {
             adView.destroy();
-        }
+        }*/
         super.onDestroy();
     }
 }

@@ -1,181 +1,181 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:ads="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <RelativeLayout
+        android:id="@+id/Body"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="30dip"
         android:background="@color/darkpurple"
-        android:id="@+id/Body">
+        android:padding="30dip">
 
         <TextView
+            android:id="@+id/LineText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="40sp"
             android:layout_marginTop="20dp"
-            android:textColor="@color/white"
             android:text="@string/LineText"
-            android:id="@+id/LineText" />
+            android:textColor="@color/white"
+            android:textSize="40sp" />
 
         <TextView
+            android:id="@+id/About"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="40sp"
             android:layout_alignParentRight="true"
             android:layout_marginTop="20dp"
             android:layout_marginRight="20dp"
-            android:textColor="@color/white"
             android:text="[?]"
-            android:id="@+id/About" />
+            android:textColor="@color/white"
+            android:textSize="40sp" />
 
         <Spinner
+            android:id="@+id/ListLines"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/ListLines"
-            android:gravity="center"
-            android:textColor="@color/white"
             android:layout_below="@+id/LineText"
-            android:prompt="@string/selectl"
+            android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
+            android:gravity="center"
+            android:prompt="@string/selectl"
+            android:textColor="@color/white" />
 
         <TextView
+            android:id="@+id/StationText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="40sp"
+            android:layout_below="@+id/ListLines"
             android:layout_marginTop="20dp"
-            android:textColor="@color/white"
             android:text="@string/StationText"
-            android:id="@+id/StationText"
-            android:layout_below="@+id/ListLines" />
+            android:textColor="@color/white"
+            android:textSize="40sp" />
 
         <Spinner
+            android:id="@+id/ListStations"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/ListStations"
-            android:layout_marginBottom="10dp"
-            android:textColor="@color/white"
-            android:gravity="center"
             android:layout_below="@+id/StationText"
-            android:prompt="@string/selects"
+            android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true" />
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:prompt="@string/selects"
+            android:textColor="@color/white" />
     </RelativeLayout>
 
     <RelativeLayout
+        android:id="@+id/Legs"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/Legs"
+        android:layout_below="@+id/Body"
         android:background="@color/white"
-        android:padding="30dip"
-        android:layout_below="@+id/Body">
+        android:padding="30dip">
 
 
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
 
             <LinearLayout
-                android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:orientation="horizontal"
                 android:weightSum="1">
 
                 <TextView
+                    android:id="@+id/StationCloseText1"
                     android:layout_width="350dp"
                     android:layout_height="wrap_content"
-                    android:textSize="30sp"
-                    android:baselineAligned="false"
                     android:layout_marginTop="20dp"
-                    android:textColor="@color/darkpurple"
+                    android:baselineAligned="false"
                     android:text="@string/StationCloseText"
-                    android:id="@+id/StationCloseText1" />
+                    android:textColor="@color/darkpurple"
+                    android:textSize="30sp" />
 
                 <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:textSize="30sp"
-                    android:baselineAligned="false"
-                    android:layout_marginTop="20dp"
-                    android:textColor="@color/darkpurple"
                     android:id="@+id/StationClose"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="bottom|right"
+                    android:layout_marginTop="20dp"
+                    android:baselineAligned="false"
                     android:gravity="bottom|right"
-                    android:layout_gravity="bottom|right" />
+                    android:textColor="@color/darkpurple"
+                    android:textSize="30sp" />
 
             </LinearLayout>
 
             <LinearLayout
-                android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
                 <TextView
+                    android:id="@+id/StationLastText1"
                     android:layout_width="350dp"
                     android:layout_height="wrap_content"
-                    android:textSize="30sp"
-                    android:baselineAligned="false"
                     android:layout_marginTop="20dp"
-                    android:textColor="@color/darkpurple"
+                    android:baselineAligned="false"
                     android:text="@string/StationLastText"
-                    android:id="@+id/StationLastText1" />
+                    android:textColor="@color/darkpurple"
+                    android:textSize="30sp" />
 
                 <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:textSize="30sp"
-                    android:baselineAligned="false"
-                    android:layout_marginTop="20dp"
-                    android:textColor="@color/darkpurple"
                     android:id="@+id/StationLast1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="bottom|right"
+                    android:layout_marginTop="20dp"
+                    android:baselineAligned="false"
                     android:gravity="bottom|right"
-                    android:layout_gravity="bottom|right"/>
+                    android:textColor="@color/darkpurple"
+                    android:textSize="30sp" />
 
             </LinearLayout>
 
             <LinearLayout
-                android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" >
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
                 <TextView
+                    android:id="@+id/StationLastText2"
                     android:layout_width="350dp"
                     android:layout_height="wrap_content"
-                    android:textSize="30sp"
-                    android:baselineAligned="false"
                     android:layout_marginTop="20dp"
-                    android:textColor="@color/darkpurple"
+                    android:baselineAligned="false"
                     android:text="@string/StationLastText"
-                    android:id="@+id/StationLastText2" />
+                    android:textColor="@color/darkpurple"
+                    android:textSize="30sp" />
 
                 <TextView
+                    android:id="@+id/StationLast2"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:textSize="30sp"
-                    android:baselineAligned="false"
+                    android:layout_gravity="bottom|right"
                     android:layout_marginTop="20dp"
-                    android:textColor="@color/darkpurple"
-                    android:id="@+id/StationLast2"
+                    android:baselineAligned="false"
                     android:gravity="bottom|right"
-                    android:layout_gravity="bottom|right"/>
+                    android:textColor="@color/darkpurple"
+                    android:textSize="30sp" />
 
             </LinearLayout>
 
         </LinearLayout>
 
-        <com.google.android.gms.ads.AdView
-            android:id="@+id/adView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            ads:adUnitId="ca-app-pub-1789938912321349/6966866456"
-            ads:adSize="FULL_BANNER"
-            android:layout_centerHorizontal="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="10dip" />
+        <!--    <com.google.android.gms.ads.AdView
+                android:id="@+id/adView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                ads:adUnitId="ca-app-pub-1789938912321349/6966866456"
+                ads:adSize="FULL_BANNER"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="10dip" />-->
 
     </RelativeLayout>
 

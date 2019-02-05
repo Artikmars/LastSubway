@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="lnk.lastsubway" >
+    package="lnk.lastsubway">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme">
         <activity
             android:name=".LastSubwayActivity"
             android:label="@string/app_name"
@@ -17,21 +20,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SecondActivity"
-            android:screenOrientation="portrait"
-            android:label="@string/secondpagetitle">
-        </activity>
-        <activity android:name=".AboutActitivy"
+        <activity
+            android:name=".SecondActivity"
+            android:label="@string/secondpagetitle"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".AboutActivity"
             android:label="@string/about_title"
-            android:theme="@android:style/Theme.Dialog">
-        </activity>
-        <meta-data
-            android:name="com.google.android.gms.version"
-            android:value="@integer/google_play_services_version" />
-
-        <activity android:name="com.google.android.gms.ads.AdActivity"
-            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"/>
+            android:theme="@android:style/Theme.Dialog"></activity>
     </application>
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+
 </manifest>
